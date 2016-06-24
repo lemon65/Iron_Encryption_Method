@@ -1,5 +1,5 @@
 # Iron_Encryption_Method -- IEM
-   * The Iron Encryption Method is an encryption program that is based off of AES-Symmetric Encryption. I am looking to create somthing that will allow me to store sensative data and be able to learn somthing in the process. Your free to use IEM if you would like, and I hope that it serves you well! 
+   * The Iron Encryption Method is an encryption program that is based off of AES-Symmetric Encryption. I am looking to create something that will allow me to store sensative data and be able to learn something in the process. Your free to use IEM if you would like, and I hope that it serves you well! 
 
 ## Features:
    * AES-Based-Symmetric Encryption
