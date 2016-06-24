@@ -1,8 +1,11 @@
 # Iron_Encryption_Method -- IEM
+   * The Iron Encryption Method is an encryption program that is based off of AES-Symmetric Encryption. I am looking to create somthing that will allow me to store sensative data and be able to learn somthing in the process. Your free to use IEM if you would like, and I hope that it serves you well! 
 
 ## Features:
+   * AES-Based-Symmetric Encryption
 
-## Installation
+## Installation:
+   * Git Clone https://github.com/lemon65/Iron_Encryption_Method
 
 ## Requirements:
    * Python 2.7.6
@@ -13,6 +16,7 @@
 | --help| Command to list Help for the program. |
 
 ## Updates:
+  * None
 
 ## ToDo:
   * All The Things
