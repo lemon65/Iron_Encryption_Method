@@ -1,14 +1,14 @@
 #!/usr/bin/python
 
 import sys
-import random as rd 
+import random as rd
 import Iron_Encrypt as IE
 import argparse
 import time
 
            ################ Notes ##################
 # This is a Script that takes a password or not and generates a Binary
-# symmetric key for the user to encrypt and decrypt data. 
+# symmetric key for the user to encrypt and decrypt data.
 
 usage = """
 ----------------------------------------------------------
@@ -34,7 +34,7 @@ def main():
     target = open(file_name, 'w')
     target.write(bin_data)
     target.close()
-    print "New Private Key Created!: %s" % file_name 
+    print "New Private Key Created!: %s" % file_name
 
 if __name__ == "__main__":
     sys.exit(main())

@@ -44,11 +44,13 @@ def main():
     # Read the Key Data...
     kr = open(args.sym_key, 'r')
     key_data = kr.read();kr.close()
+    key_data = key_data.split(':')
 
     # reads the File given...
     if args.file and not args.string:
         if not os.path.isfile(args.file):
-            print 'Error: %s does not seem to be a file!' % args.file
+            print 'Error: %s does not seem to be a file! -- Printing Help' % args.file
+            parser.print_help()
             sys.exit()
         fr = open(args.file, 'r')
         target_data = fr.read(); fr.close()
@@ -60,13 +62,13 @@ def main():
             print "### Error you didn't Enter any Data! ### -- Printing Help"
             parser.print_help()
             sys.exit()
-    # TODO -- Looping and Saving Data -- HERE
+
     final = IE.iron_caller(args, key_data, target_data)
-    
+
     # OUTPUT for Encrypt
     if args.encrypt and not args.decrypt:
         if args.string:
-            print final
+            print '\nEncoded Result:%s' % final
         if args.file:
             fw = open(args.file, 'w')
             fw.write(final); fw.close()
@@ -75,11 +77,10 @@ def main():
     if args.decrypt and not args.encrypt:
         string = IE.decode(final)
         if args.string:
-            print string
+            print '\nDecoded Result:%s' % string
         if args.file:
             fw = open(args.file, 'w')
             fw.write(string); fw.close()
-
 
 if __name__ == "__main__":
     sys.exit(main())
