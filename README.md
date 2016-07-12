@@ -1,8 +1,12 @@
 # Iron_Encryption_Method -- IEM
-   * The Iron Encryption Method is an encryption program that is based off of AES-Symmetric Encryption. I am looking to create something that will allow me to store sensative data and be able to learn something in the process. Your free to use IEM if you would like, and I hope that it serves you well! 
+   * The Iron Encryption Method is an encryption program that is loosely based off of AES-Symmetric Encryption.
+     I am looking to create something that will allow me to store sensitive data and be able to learn something in the
+     process. Your free to use IEM if you would like, and I hope that it serves you well!
 
 ## Features:
-   * AES-Based-Symmetric Encryption
+   * Key-Based-Symmetric Encryption.
+   * Takes Text Files and Strings.
+   * Easy to import and use.
 
 ## Installation:
    * Git Clone https://github.com/lemon65/Iron_Encryption_Method
@@ -14,12 +18,14 @@
 | Flags        | description |
 | ------------- |:-------------:|
 | --help| Command to list Help for the program. |
-
-## Updates:
-  * None
+| -k | Path to the Symmetric Key.[String] |
+| -f | Path to an input file.[String] |
+| -s | Flag to use a string as an Input.[Flag] |
+| -e | Flag to Encrypt data.[Flag] |
+| -d | Flag to Decrypt data.[Flag] |
 
 ## ToDo:
-  * All The Things
+  * Currently looking into List and Char shifts.
 
 ## Help:
   * If you need help you can email me @ lemon65.twitch@gmail.com, or talk with me on my Team Speak
