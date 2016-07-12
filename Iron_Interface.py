@@ -67,10 +67,6 @@ def main():
     while crypt_count < 2:
         final = IE.iron_caller(args, key_data, target_data)
         target_data = final
-        if args.encrypt and not args.decrypt:
-            pass
-        if args.decrypt and not args.encrypt:
-            target_data = IE.decode(target_data)
         crypt_count += 1
 
     if args.string:
