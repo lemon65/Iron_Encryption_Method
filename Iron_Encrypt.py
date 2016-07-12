@@ -50,8 +50,12 @@ def iron_caller(args, key_data, target_data):
                 output = bit_step
             formatted_data.append(output)
     formatted_data = ':'.join(map(str, formatted_data))
-    if args.encrypt and not args.decrypt:
-        pass
-    if args.decrypt and not args.encrypt:
-        formatted_data = decode(formatted_data)
+    try:
+        if args.encrypt and not args.decrypt:
+            pass
+        if args.decrypt and not args.encrypt:
+            formatted_data = decode(formatted_data)
+    except Exception as e:
+        print 'Error when decoding data, is your Key Right?'
+        sys.exit()
     return formatted_data
