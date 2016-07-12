@@ -7,7 +7,7 @@ import argparse
 import time
 
            ################ Notes ##################
-# This is a Script that takes a password or not and generates a Binary
+# This is a Script that takes a password or not and generates a 
 # symmetric key for the user to encrypt and decrypt data.
 
 usage = """
@@ -19,7 +19,7 @@ python Iron_key_Generator.py -p 'PASSWORD_HERE'
 python Iron_key_Generator.py (to generate a password with a random int)
 ----------------------------------------------------------
 """
-parser = argparse.ArgumentParser(description='This is a Script that takes a password or not and generates a Binary symmetric key for the user to encrypt and decrypt data.', usage=usage)
+parser = argparse.ArgumentParser(description='This is a Script that takes a password or not and generates a symmetric key for the user to encrypt and decrypt data.', usage=usage)
 parser.add_argument('-p', '--password', help='Password used when creating a Key.', type=str, default=False)
 args = parser.parse_args()
 

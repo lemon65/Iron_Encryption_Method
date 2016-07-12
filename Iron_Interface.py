@@ -63,24 +63,21 @@ def main():
             parser.print_help()
             sys.exit()
 
-    final = IE.iron_caller(args, key_data, target_data)
+    crypt_count = 0
+    while crypt_count < 2:
+        final = IE.iron_caller(args, key_data, target_data)
+        target_data = final
+        if args.encrypt and not args.decrypt:
+            pass
+        if args.decrypt and not args.encrypt:
+            target_data = IE.decode(target_data)
+        crypt_count += 1
 
-    # OUTPUT for Encrypt
-    if args.encrypt and not args.decrypt:
-        if args.string:
-            print '\nEncoded Result:%s' % final
-        if args.file:
-            fw = open(args.file, 'w')
-            fw.write(final); fw.close()
-
-    # OUTPUT for Decrypt
-    if args.decrypt and not args.encrypt:
-        string = IE.decode(final)
-        if args.string:
-            print '\nDecoded Result:%s' % string
-        if args.file:
-            fw = open(args.file, 'w')
-            fw.write(string); fw.close()
+    if args.string:
+        print '\nResult:%s' % target_data
+    if args.file:
+        fw = open(args.file, 'w')
+        fw.write(target_data); fw.close()
 
 if __name__ == "__main__":
     sys.exit(main())
