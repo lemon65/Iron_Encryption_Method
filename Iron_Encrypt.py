@@ -21,7 +21,11 @@ def encode(target_data):
 def decode(target_data):
     decode_list = []
     for de_step in target_data.split(':'): 
-        target_data = de_step.strip().decode("hex")
+        try:
+            target_data = de_step.strip().decode("hex")
+        except Exception as e:
+            print 'Error: Please check your data, and the Key you are using!'
+            sys.exit()
         decode_list.append(target_data)
     target_data = ''.join(decode_list)
     return target_data
@@ -50,12 +54,8 @@ def iron_caller(args, key_data, target_data):
                 output = bit_step
             formatted_data.append(output)
     formatted_data = ':'.join(map(str, formatted_data))
-    try:
-        if args.encrypt and not args.decrypt:
-            pass
-        if args.decrypt and not args.encrypt:
-            formatted_data = decode(formatted_data)
-    except Exception as e:
-        print 'Error when decoding data, is your Key Right?'
-        sys.exit()
+    if args.encrypt and not args.decrypt:
+        pass
+    if args.decrypt and not args.encrypt:
+        formatted_data = decode(formatted_data)
     return formatted_data
