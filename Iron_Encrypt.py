@@ -24,8 +24,8 @@ def decode(target_data):
         try:
             target_data = de_step.strip().decode("hex")
         except Exception as e:
-            print 'Error: Please check your data, and the Key you are using!'
-            sys.exit()
+            decode_list.append(de_step)
+            print 'Hit Error on: %s, Keeping Hex data.' % de_step
         decode_list.append(target_data)
     target_data = ''.join(decode_list)
     return target_data
@@ -50,6 +50,8 @@ def iron_caller(args, key_data, target_data):
                 # This is a Fix for New Lines within a File..
                 if output == 'a':
                     output = '0a'
+                if output == 'd':
+                    output = '0d'
             except Exception as e:
                 output = bit_step
             formatted_data.append(output)
