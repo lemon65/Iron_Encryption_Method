@@ -10,6 +10,13 @@
 
 ## Installation:
    * Git Clone https://github.com/lemon65/Iron_Encryption_Method
+   * python Iron_Key_Generator.py <OR> python Iron_Key_Generator.py -p "PASSWORD"
+   * python Iron_Interface.py -k Private_Key_DATE -f file_name.txt -e
+      * python Iron_Interface.py -k Private_Key_20160728-134234 -s -e
+		  * Enter a String that you want to encrypt. 
+   * python Iron_Interface.py -k Private_Key_DATE -f file_name.txt -d
+		  * python Iron_Interface.py -k Private_Key_20160728-134234 -s -d
+	 	  * Enter a String that you want to decrypt. 
 
 ## Requirements:
    * Python 2.7.6
