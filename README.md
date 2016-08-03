@@ -7,6 +7,8 @@
    * Key-Based-Symmetric Encryption.
    * Takes Text Files and Strings.
    * Easy to import and use.
+   * Reverses each data block for better encryption.
+   * Able to Encrypt and Decrypt 21752 Lines, in under 3-Seconds.
 
 ## Installation:
    * Git Clone https://github.com/lemon65/Iron_Encryption_Method
@@ -32,7 +34,8 @@
 | -d | Flag to Decrypt data.[Flag] |
 
 ## ToDo:
-  * Currently looking into List and Char shifts.
+  * Refine Block Reverse.
+  * Use more data from the created Key. 
 
 ## Help:
   * If you need help you can email me @ lemon65.twitch@gmail.com, or talk with me on my Team Speak

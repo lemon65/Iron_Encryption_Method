@@ -63,17 +63,13 @@ def main():
             parser.print_help()
             sys.exit()
 
-    crypt_count = 0
-    while crypt_count < 2:
-        final = IE.iron_caller(args, key_data, target_data)
-        target_data = final
-        crypt_count += 1
+    final = IE.iron_caller(args.encrypt, args.decrypt, key_data, target_data)
 
     if args.string:
-        print '\nResult:%s' % target_data
+        print '\nResult:%s' % final
     if args.file:
         fw = open(args.file, 'w')
-        fw.write(target_data); fw.close()
+        fw.write(final); fw.close()
 
 if __name__ == "__main__":
     sys.exit(main())
