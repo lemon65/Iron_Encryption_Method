@@ -41,6 +41,7 @@ if __name__ == "__main__":
 ```
 
 Output from Running the Above Code -- > 
+```
   $ python test.py
   Data: Test Data Example...
           Encrypted data:
@@ -55,6 +56,7 @@ Output from Running the Above Code -- >
   Data: Test Data: FooBar
           Encrypted data: 41:56:77:5c:58:7e:10:0b:55:41:58:70:18:47:45:51:62
            Decrpyted data: Test Data: FooBar
+```
 
 ## Installation:
    * Git Clone https://github.com/lemon65/Iron_Encryption_Method
