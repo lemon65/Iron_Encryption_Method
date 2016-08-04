@@ -1,5 +1,4 @@
-[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-# Iron_Encryption_Method -- IEM
+# Iron_Encryption_Method -- IEM [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
    * The Iron Encryption Method is an encryption program that is loosely based off of AES-Symmetric Encryption.
      I am looking to create something that will allow me to store sensitive data and be able to learn something in the
      process. Your free to use IEM if you would like, and I hope that it serves you well!
