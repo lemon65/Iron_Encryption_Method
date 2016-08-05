@@ -26,9 +26,7 @@ data_list = ['Test Data Example...',
 
 def main():
     # Read the Key Data...
-    kr = open('Private_Key_20160803-150027', 'r')# Generate a key with "python Iron_Key_Generator.py"
-    key_data = kr.read();kr.close()
-    key_data = key_data.split(':')
+    key_data = IE.pull_key_data('Private_Key_20160803-150027')# Generate a Key with Iron_key_Generator.py 
     for i in data_list: 
         print 'Data: %s' % i # Print Normal data.
         final = IE.iron_caller(True, False, key_data, i)
