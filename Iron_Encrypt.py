@@ -59,10 +59,10 @@ def iron_caller(encrypt, decrypt, key_data, target_data):
             return target_data
 
     bin_list = raw_bin.split(':')
-    if len(key_data) < 64:
+    if len(key_data) < 128:
         block_size = len(key_data)
     else:
-        block_size = 64
+        block_size = 128
     block_list = [bin_list[x:x+block_size] for x in range(0, len(bin_list),block_size)]
     for block_step in block_list:
         if encrypt:
