@@ -14,7 +14,6 @@ def reverse_list(target_list):
 
 # Read the Key Data...
 def pull_key_data(file_path):
-    print file_path
     kr = open(file_path, 'r')
     key_data = kr.read();kr.close()
     key_data = key_data.split(':')
