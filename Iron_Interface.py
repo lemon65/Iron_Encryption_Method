@@ -41,10 +41,7 @@ def main():
         print 'Please Select a Mode (-e or -d), Also try --help for more info.'
         sys.exit()
 
-    # Read the Key Data...
-    kr = open(args.sym_key, 'r')
-    key_data = kr.read();kr.close()
-    key_data = key_data.split(':')
+    key_data = IE.pull_key_data(args.sym_key)
 
     # reads the File given...
     if args.file and not args.string:
@@ -66,7 +63,7 @@ def main():
     final = IE.iron_caller(args.encrypt, args.decrypt, key_data, target_data)
 
     if args.string:
-        print '\nResult:%s' % final
+        print '\nResult--> \t\t%s' % final
     if args.file:
         fw = open(args.file, 'w')
         fw.write(final); fw.close()

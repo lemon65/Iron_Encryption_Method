@@ -12,6 +12,14 @@ import time
 def reverse_list(target_list):
     return target_list[::-1]
 
+# Read the Key Data...
+def pull_key_data(file_path):
+    print file_path
+    kr = open(file_path, 'r')
+    key_data = kr.read();kr.close()
+    key_data = key_data.split(':')
+    return key_data
+
 # Takes string data and transforms it into Hex Data.
 def encode(target_data):
     encode_list = []
