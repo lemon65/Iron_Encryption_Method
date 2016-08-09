@@ -1,8 +1,4 @@
 #!/usr/bin/python
-import os
-import sys
-import binascii
-import time
 
            ################ Description ##################
 # This is the Bread and butter of the Iron Encryption Method(IEM), This is
@@ -46,18 +42,7 @@ def iron_caller(encrypt, decrypt, key_data, target_data):
     formatted_data = []
     if not encrypt and not decrypt:
         return None
-    if encrypt and not decrypt:
-        raw_bin = encode(target_data)
-    if decrypt and not encrypt:
-        raw_bin = target_data
-        #This checks that the data should be decrypted.
-        try:
-            sample_data = raw_bin.split(':')[0]
-            if int(sample_data, 16):
-                pass
-        except Exception as e:
-            return target_data
-
+    raw_bin = encode(target_data)
     bin_list = raw_bin.split(':')
     if len(key_data) < 128:
         block_size = len(key_data)
@@ -82,8 +67,5 @@ def iron_caller(encrypt, decrypt, key_data, target_data):
         for data_step in block_buffer:
             formatted_data.append(data_step)
     formatted_data = ':'.join(map(str, formatted_data))
-    if encrypt and not decrypt:
-        pass
-    if decrypt and not encrypt:
-        formatted_data = decode(formatted_data)
+    formatted_data = decode(formatted_data)
     return formatted_data
