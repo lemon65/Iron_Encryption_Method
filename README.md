@@ -32,7 +32,7 @@ def main():
         final = IE.iron_caller(True, False, key_data, i)
         print '\tEncrypted data: %s' % final# Print encrypted data.
         final = IE.iron_caller(False, True, key_data, final)
-        print '\t Decrpyted data: %s' % final# Print the decrypted data.
+        print '\tDecrpyted data: %s' % final# Print the decrypted data.
 
 if __name__ == "__main__":
     sys.exit(main())
@@ -40,20 +40,19 @@ if __name__ == "__main__":
 
 Output from Running the Above Code -- > 
 ```
-  $ python test.py
-  Data: Test Data Example...
-          Encrypted data:
-  1d:19:1b:56:5b:48:5d:50:4c:70:19:55:4c:52:72:14:42:45:53:64
-           Decrpyted data: Test Data Example...
-  Data: Number: 3343436565
-          Encrypted data: 06:01:00:05:04:0c:03:05:07:06:19:0e:4a:56:54:59:43:78
-           Decrpyted data: Number: 3343436565
-  Data: Name: Bob Hope
-          Encrypted data: 56:47:5a:7b:17:5a:5f:73:14:0f:5c:59:59:7d
-           Decrpyted data: Name: Bob Hope
-  Data: Test Data: FooBar
-          Encrypted data: 41:56:77:5c:58:7e:10:0b:55:41:58:70:18:47:45:51:62
-           Decrpyted data: Test Data: FooBar
+$ python test.py
+Data: Test Data Example...
+        Encrypted data: tmj] %91Ll %*b2A\
+        Decrpyted data: Test Data Example...
+Data: Number: 3343436565
+        Encrypted data: ouqagdul{#.6/3|
+        Decrpyted data: Number: 3343436565
+Data: Name: Bob Hope
+        Encrypted data: ?3+pl7;|),0
+        Decrpyted data: Name: Bob Hope
+Data: Test Data: FooBar
+        Encrypted data: ("W#tjU2-q?''
+        Decrpyted data: Test Data: FooBar
 ```
 
 ## Installation:
