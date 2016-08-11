@@ -5,7 +5,7 @@
 
 ## Features:
    * Key-Based-Symmetric Encryption.
-   * Takes Text Files and Strings.
+   * Iron_Iterface is able to Take Text Files and encode them. 
    * Easy to import and use.
    * Reverses each data block for better encryption.
    * Able to Encrypt and Decrypt 21752 Lines, in under 3-Seconds.
