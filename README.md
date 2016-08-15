@@ -74,7 +74,6 @@ Data: Test Data: FooBar
 | --help| Command to list Help for the program. |
 | -k | Path to the Symmetric Key.[String] |
 | -f | Path to an input file.[String] |
-| -s | Flag to use a string as an Input.[Flag] |
 | -e | Flag to Encrypt data.[Flag] |
 | -d | Flag to Decrypt data.[Flag] |
 
